@@ -1,0 +1,5 @@
+{"event": "log_line", "data": "ERROR: bad_config: Configuration failed due to syntax error"}
+{"event": "log_line", "data": "ERROR: database: Connection timeout occurred"}
+{"event": "log_line", "data": "ERROR: bad_config: Invalid parameter in config file"}
+{"event": "log_line", "data": "CRITICAL: system: Memory usage exceeded threshold"}
+{"event": "log_line", "data": "ERROR: bad_config: Something failed"}

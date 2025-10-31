@@ -1,0 +1,10 @@
+state,action,q_value
+port_busy,clear_port,0.99998427136
+port_busy,restart_service,0.9552
+api_down,restart_service,0.91
+api_down,restart_container,0.68
+config_error,rollback_config,0.94
+container_crash,restart_container,0.88
+container_crash,restart_service,0.75
+network_issue,check_network,0.82
+network_issue,restart_service,0.69

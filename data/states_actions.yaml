@@ -1,0 +1,26 @@
+states:
+  - port_busy
+  - api_down
+  - config_error
+  - container_crash
+  - network_issue
+
+actions:
+  port_busy:
+    - clear_port
+    - restart_service
+
+  api_down:
+    - restart_service
+    - restart_container
+
+  config_error:
+    - rollback_config
+
+  container_crash:
+    - restart_container
+    - restart_service
+
+  network_issue:
+    - check_network
+    - restart_service

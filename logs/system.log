@@ -1,0 +1,11 @@
+ERROR: bad_config: Configuration failed due to syntax error
+ERROR: database: Connection timeout occurred
+ERROR: bad_config: Invalid parameter in config file
+CRITICAL: system: Memory usage exceeded threshold
+ERROR: bad_config: Something failed
+ERROR: network: Connection refused on port 8080
+ERROR: authentication: Invalid credentials provided
+CRITICAL: security: Unauthorized access attempt detected
+ERROR: file_system: Disk space running low
+ERROR: bad_config: Missing required environment variable
+ERROR: bad_config: NEW ERROR JUST ADDED
