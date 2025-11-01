@@ -1,0 +1,34 @@
+{
+  "services": {
+    "web_server": {
+      "restart_command": "systemctl restart nginx",
+      "status_command": "systemctl status nginx",
+      "config_path": "/etc/nginx/nginx.conf",
+      "log_path": "/var/log/nginx/error.log"
+    },
+    "database": {
+      "restart_command": "systemctl restart postgresql",
+      "status_command": "systemctl status postgresql",
+      "config_path": "/etc/postgresql/postgresql.conf",
+      "backup_command": "pg_dump -U postgres mydb > backup.sql"
+    },
+    "api_service": {
+      "restart_command": "pm2 restart api-service",
+      "status_command": "pm2 status api-service",
+      "config_path": "./config/api.json",
+      "log_path": "./logs/api.log"
+    }
+  },
+  "containers": {
+    "web_container": "nginx-container",
+    "api_container": "api-service-container",
+    "db_container": "postgres-container"
+  },
+  "network": {
+    "interface": "eth0",
+    "dns_servers": [
+      "8.8.8.8",
+      "1.1.1.1"
+    ]
+  }
+}

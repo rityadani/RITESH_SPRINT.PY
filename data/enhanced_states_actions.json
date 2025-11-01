@@ -1,0 +1,125 @@
+{
+  "states": {
+    "service_down_critical": {
+      "description": "Critical service completely down",
+      "severity": "critical",
+      "context": [
+        "service_name",
+        "downtime_duration",
+        "user_impact"
+      ]
+    },
+    "service_degraded_performance": {
+      "description": "Service running but slow",
+      "severity": "high",
+      "context": [
+        "response_time",
+        "error_rate",
+        "throughput"
+      ]
+    },
+    "database_connection_lost": {
+      "description": "Database connectivity issues",
+      "severity": "critical",
+      "context": [
+        "connection_pool",
+        "query_timeout",
+        "transaction_failures"
+      ]
+    },
+    "resource_exhaustion_memory": {
+      "description": "Memory usage above threshold",
+      "severity": "high",
+      "context": [
+        "memory_percentage",
+        "process_count",
+        "swap_usage"
+      ]
+    },
+    "resource_exhaustion_cpu": {
+      "description": "CPU usage above threshold",
+      "severity": "high",
+      "context": [
+        "cpu_percentage",
+        "load_average",
+        "process_queue"
+      ]
+    },
+    "network_connectivity_lost": {
+      "description": "Network connectivity issues",
+      "severity": "critical",
+      "context": [
+        "packet_loss",
+        "latency",
+        "bandwidth"
+      ]
+    },
+    "deployment_failure": {
+      "description": "Deployment process failed",
+      "severity": "critical",
+      "context": [
+        "deployment_stage",
+        "error_code",
+        "rollback_available"
+      ]
+    }
+  },
+  "actions": {
+    "service_down_critical": [
+      "restart_service_graceful",
+      "restart_service_force",
+      "failover_to_backup",
+      "scale_horizontal",
+      "rollback_deployment"
+    ],
+    "service_degraded_performance": [
+      "optimize_queries",
+      "clear_cache",
+      "restart_service_graceful",
+      "scale_vertical",
+      "enable_circuit_breaker"
+    ],
+    "database_connection_lost": [
+      "restart_database_service",
+      "reset_connection_pool",
+      "failover_to_replica",
+      "increase_connection_timeout",
+      "restart_application"
+    ],
+    "resource_exhaustion_memory": [
+      "restart_high_memory_processes",
+      "clear_application_cache",
+      "scale_vertical",
+      "enable_memory_limits",
+      "garbage_collection_force"
+    ],
+    "resource_exhaustion_cpu": [
+      "scale_horizontal",
+      "optimize_cpu_intensive_tasks",
+      "restart_cpu_heavy_processes",
+      "enable_cpu_throttling",
+      "load_balance_redistribute"
+    ],
+    "network_connectivity_lost": [
+      "restart_network_service",
+      "switch_network_interface",
+      "reset_network_stack",
+      "failover_to_backup_network",
+      "contact_network_team"
+    ],
+    "deployment_failure": [
+      "rollback_to_previous_version",
+      "retry_deployment",
+      "manual_deployment_fix",
+      "revert_configuration",
+      "emergency_maintenance_mode"
+    ]
+  },
+  "reward_shaping": {
+    "success_bonus": 1.0,
+    "failure_penalty": -1.0,
+    "time_penalty": -0.1,
+    "user_impact_multiplier": 2.0,
+    "cost_efficiency_bonus": 0.5
+  }
+}

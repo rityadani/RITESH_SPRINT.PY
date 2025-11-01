@@ -8,4 +8,8 @@ ERROR: authentication: Invalid credentials provided
 CRITICAL: security: Unauthorized access attempt detected
 ERROR: file_system: Disk space running low
 ERROR: bad_config: Missing required environment variable
-ERROR: bad_config: NEW ERROR JUST ADDED
+ERROR: bad_config: NEW ERROR JUST ADDEDERROR: bad_config: Configuration file corrupted
+ERROR: database: Connection timeout occurred
+CRITICAL: system: Memory usage exceeded threshold
+ERROR: network: Connection refused on port 8080
+ERROR: bad_config: Missing required environment variable

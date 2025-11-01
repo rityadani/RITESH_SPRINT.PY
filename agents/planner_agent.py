@@ -1,7 +1,7 @@
 import time
 import os
 import csv
-from smart_agent import SmartAgent
+from .smart_agent import SmartAgent
 def execute_fix(action):
     """Simple auto-fix function that simulates fixing actions"""
     fix_actions = {
