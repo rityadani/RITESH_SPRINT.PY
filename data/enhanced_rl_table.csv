@@ -1,8 +1,8 @@
 state,action,q_value,visit_count,last_updated
-service_down_critical,restart_service_graceful,1.387165070005814,5,1761982453.1524582
-service_down_critical,restart_service_force,1.1167824813709362,5,1761982453.1524603
-service_down_critical,failover_to_backup,1.2061899315009454,4,1761982453.1524625
-service_down_critical,scale_horizontal,12.378078399372455,129,1761982453.1524642
-service_down_critical,rollback_deployment,3.5056964177743466,11,1761982453.1524656
-unknown_port_unreachable,investigate_manual,-11.295663584842364,154,1761982453.1524682
-unknown_process_down,investigate_manual,-19.204118774909315,231,1761982453.1524694
+service_down_critical,restart_service_graceful,1.387165070005814,5,1761982589.7782109
+service_down_critical,restart_service_force,1.1167824813709362,5,1761982589.7782123
+service_down_critical,failover_to_backup,1.2061899315009454,4,1761982589.778214
+service_down_critical,scale_horizontal,12.781493582086275,135,1761982589.7782152
+service_down_critical,rollback_deployment,3.5056964177743466,11,1761982589.7782161
+unknown_port_unreachable,investigate_manual,-11.583187963092005,160,1761982589.778218
+unknown_process_down,investigate_manual,-19.592124074655825,240,1761982589.778219
